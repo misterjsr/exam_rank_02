@@ -2,11 +2,11 @@
 
 int main()
 {
-    int r;
+    int a;
     char *line;
 
     line = NULL;
-    while((r = get_next_line(&line)) > 0)
+    while((a = get_next_line(&line)) > 0)
     {
         printf("%s\n", line);
         free(line);

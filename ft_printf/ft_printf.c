@@ -3,12 +3,9 @@
 
 static int  ft_nbrlen(long n, int base_len)
 {
-    int i = 1;
-    while (n >= base_len)
-    {
+    int i = 0;
+    while (n >= base_len && i++)
         n /= base_len;
-        i++;
-    }
     return (i);
 }
 
@@ -25,7 +22,6 @@ int     ft_printf(const char *format, ...)
     char    *str, *s;
     long    nbr;
     int     neg, len, width, spaces, zeros, length = 0, prec;
-
     va_start(args, format);
     str = (char*)format;
     while (*str)

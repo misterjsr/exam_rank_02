@@ -3,7 +3,6 @@
 int search(char c, char *str, int j)
 {
     int i = -1;
-
     while (++i < j)
       if (str[i] == c)
          return(0);
@@ -15,7 +14,6 @@ int main(int argc, char **argv)
     if (argc == 3)
     {
         int i = -1, j;
-
         while (argv[1][++i] && (j = -1))
             if (search(argv[1][i], argv[1], i))
                 while (argv[2][++j])

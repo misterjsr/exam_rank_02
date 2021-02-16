@@ -3,10 +3,9 @@
 int get_next_line(char **line)
 {
     char    buffer[512];
-    int     lectura;
-    int     i;
+    int     lectura , i = 0;
 
-    if (((i = 0) && read(0, &buffer[i], 0) < 0) || (!line))
+    if (read(0, &buffer[0], 0) < 0 || (!line))
         return (-1);
     while ((lectura = read(0, &buffer[i], 1)) > 0 && buffer[i] != '\n')
         i++;
